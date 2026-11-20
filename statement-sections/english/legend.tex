@@ -1,0 +1,8 @@
+Manish wants to stay productive, so every day he needs to complete work worth $k$ focus points. On day $i$ he earns $a_i$ focus points.
+
+Manish chooses a non-empty segment of consecutive days $[l, r]$ and starts it with a balance equal to $0$. On each day $i$ of the segment, his balance changes by $a_i - k$: if $a_i > k$, the surplus is saved, and if $a_i < k$, the shortage is borrowed.
+
+A segment is called \textit{sustainable} if after \textbf{each} day of it the balance is not less than $-m$. Formally, a segment $[l, r]$ is sustainable if for every $j$ from $l$ to $r$,
+$$\sum_{i=l}^{j} (a_i - k) \ge -m.$$
+
+Find the length of the longest sustainable segment, or report that there is none.

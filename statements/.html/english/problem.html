@@ -1,0 +1,32 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META content="no-cache" http-equiv="pragma">
+    <META content="-1" http-equiv="expires">
+    <META content="text/html;charset=UTF-8" http-equiv="content-type">
+    <LINK href="problem-statement.css" rel="stylesheet" type="text/css">
+    <TITLE>Focus Streak</TITLE>
+    <SCRIPT type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+        });
+        </SCRIPT>
+        <SCRIPT async="" src="https://polygon.codeforces.com/lib/MathJax/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript">
+    </SCRIPT>
+</HEAD><BODY>
+    <DIV class="problem-statement"><DIV class="header"><DIV class="title">Focus Streak</DIV><DIV class="time-limit"><DIV class="property-title">time limit per test</DIV>1 second</DIV><DIV class="memory-limit"><DIV class="property-title">memory limit per test</DIV>256 megabytes</DIV><DIV class="input-file input-standard"><DIV class="property-title">input</DIV>standard input</DIV><DIV class="output-file output-standard"><DIV class="property-title">output</DIV>standard output</DIV></DIV><DIV class="legend"><P>Manish wants to stay productive, so every day he needs to complete work worth $$$k$$$ focus points. On day $$$i$$$ he earns $$$a_i$$$ focus points.</P><P>Manish chooses a non-empty segment of consecutive days $$$[l, r]$$$ and starts it with a balance equal to $$$0$$$. On each day $$$i$$$ of the segment, his balance changes by $$$a_i - k$$$: if $$$a_i  \gt  k$$$, the surplus is saved, and if $$$a_i  \lt  k$$$, the shortage is borrowed.</P><P>A segment is called <SPAN class="tex-font-style-it">sustainable</SPAN> if after <SPAN class="tex-font-style-bf">each</SPAN> day of it the balance is not less than $$$-m$$$. Formally, a segment $$$[l, r]$$$ is sustainable if for every $$$j$$$ from $$$l$$$ to $$$r$$$, $$$$$$\sum_{i=l}^{j} (a_i - k) \ge -m.$$$$$$</P><P>Find the length of the longest sustainable segment, or report that there is none.</P></DIV><P></P><P></P><DIV class="input-specification"><DIV class="section-title">Input</DIV><P></P><P>The first line contains three integers $$$n$$$, $$$k$$$ and $$$m$$$ ($$$1 \le n \le 10^5$$$; $$$0 \le k \le 10^4$$$; $$$0 \le m \le 10^9$$$) &mdash; the number of days, the daily requirement, and the maximum allowed debt.</P><P>The second line contains $$$n$$$ integers $$$a_1, a_2, \ldots, a_n$$$ ($$$0 \le a_i \le 10^4$$$) &mdash; the focus points earned on each day.</P></DIV><P></P><P></P><DIV class="output-specification"><DIV class="section-title">Output</DIV><P></P><P>Print a single integer &mdash; the length of the longest sustainable segment. If there are no sustainable segments, print $$$0$$$.</P></DIV><P></P><P></P><DIV class="sample-tests"><DIV class="section-title">Examples</DIV><P></P><P></P><DIV class="sample-test"><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="6 4 2
+6 1 1 9 2 2
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">6 4 2</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">6 1 1 9 2 2</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+3
+</PRE></DIV><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="7 4 3
+2 1 7 0 3 5 1
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">7 4 3</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">2 1 7 0 3 5 1</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+4
+</PRE></DIV><DIV class="input"><DIV class="title">Input</DIV><PRE class="content" data-content="3 5 0
+1 2 3
+">
+<DIV class="test-example-line test-example-line-even test-example-line-0">3 5 0</DIV><DIV class="test-example-line test-example-line-even test-example-line-0">1 2 3</DIV></PRE></DIV><DIV class="output"><DIV class="title">Output</DIV><PRE class="content">
+0
+</PRE></DIV></DIV></DIV><P></P><P></P><DIV class="note"><DIV class="section-title">Note</DIV><P></P><P>In the first example, the segment $$$[4, 6]$$$ (the days with $$$9, 2, 2$$$) is sustainable: the balances after each day are $$$5, 3, 1$$$, and all of them are at least $$$-2$$$. The segment $$$[1, 3]$$$ is not sustainable: the balances are $$$2, -1, -4$$$, and $$$-4  \lt  -2$$$. No segment of length $$$4$$$ or more is sustainable.</P><P>In the second example, the segment $$$[3, 6]$$$ (the days with $$$7, 0, 3, 5$$$) is sustainable: the balances are $$$3, -1, -2, -1$$$, all at least $$$-3$$$. Adding day $$$7$$$ gives balance $$$-4  \lt  -3$$$. No segment of length $$$5$$$ or more is sustainable.</P><P>In the third example, already on day $$$1$$$ the balance becomes $$$1 - 5 = -4  \lt  0$$$, and every other day is similar, so there are no sustainable segments.</P></DIV></DIV>   
+
+</BODY></HTML>
