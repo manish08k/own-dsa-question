@@ -85,7 +85,6 @@ doall.bat
 - **Author:** Manish Nalumachu
 - **Language:** C++17
 
-[View Problem on Polygon](https://polygon.codeforces.com/p1IGlZL/manish08k/longest-sustainable-focus-streak)
 
 ---
 
